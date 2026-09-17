@@ -1,3 +1,5 @@
+```mermaid
+
 classDiagram
 
 &nbsp;   direction BT
@@ -56,9 +58,9 @@ classDiagram
 
 
 
-&nbsp;   %% 관계 설정
-
 &nbsp;   Receipt ..> Beverage : Dependency (use-a)
 
 &nbsp;   Receipt o-- Company : Aggregation (has-a)
+
+```
 

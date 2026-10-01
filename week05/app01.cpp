@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿﻿#include <iostream>
 #include <string>
 #include <typeinfo> 
 using namespace std;
@@ -31,8 +31,10 @@ int main()
 	//Dog* pd = (Dog*)p;  // Down Casting. Old C style
 	//pd->makeSound();
 
-	Cat* pd = (Cat*)p;  // Down Casting. Old C style
-	pd->makeSound();
+	//Cat* pc = (Cat*)p;  // Down Casting. Old C style. Danger!
+	Cat* pc = dynamic_cast<Cat*>(p);  // Down Casting. Modern C++ style.
+	cout << pc << '\n';
+	pc->makeSound();
 
 	delete p;
 	p = nullptr;

@@ -9,7 +9,7 @@ protected:
 public:
 	Student(string name) : name(name) {}
 };
-class DormitoryStudent : public Student {
+class DormitoryStudent : virtual public Student {
 public:
 	int roomNumber;
 	DormitoryStudent(string name, int roomNumber) : Student(name), roomNumber(roomNumber) {}
@@ -20,7 +20,7 @@ public:
 		cout << "벌점부여!\n";
 	}
 };
-class UndergraduateStudent : public Student {
+class UndergraduateStudent : virtual public Student {
 public:
 	int id;
 	UndergraduateStudent(string name, int id) : Student(name), id(id) {}
@@ -34,7 +34,7 @@ public:
 class UndergraduateDormitoryStudent : public DormitoryStudent, public UndergraduateStudent {
 public:
 	UndergraduateDormitoryStudent(string name, int roomNumber, int id) : Student(name), DormitoryStudent(name, roomNumber), UndergraduateStudent(name, id) {}
-
+	  
 	void warn() {
 		cout << "학생 이름 : " << name << '\n';
 		cout << "학번 : " << id << '\n';

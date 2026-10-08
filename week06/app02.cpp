@@ -3,20 +3,22 @@
 using namespace std;
 
 class DormitoryStudent {
-public
-	void warn() { cout << "ë²Œì ë¶€ì—¬!\n"; }
+public:
+	void warn() { cout << "©ö??¢®¨¬?¢¯?!\n"; }
 };
 class UndergraduateStudent {
-public
-	void warn() { cout << "í•™ì‚¬ê²½ê³ !\n"; }
+public:
+	void warn() { cout << "?¨¢??¡Æ©¡¡Æ?!\n"; }
 };
-class UndergraduateDormitoryStudent : public DormitoryStudent, public UndergraduateDormitoryStudent {
+class UndergraduateDormitoryStudent : public DormitoryStudent, public UndergraduateStudent {
 
 };
 
 int main()
 {
 	UndergraduateDormitoryStudent uds;
-	uds.warn();
+	uds.DormitoryStudent::warn();
+	uds.UndergraduateStudent::warn();
 	return 0;
+
 }

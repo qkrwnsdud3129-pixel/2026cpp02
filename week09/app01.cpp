@@ -25,6 +25,10 @@ public:
         return *this;
     }
 
+    Complex operator+(int scalar) const {
+        return Complex(real + scalar, imaginary);
+    }
+
     int getReal() const {
         return real;
     }
@@ -84,6 +88,10 @@ int main() {
     cout << c5;
     cin >> c5;
     cout << c5;
+
+    Complex c6 = c4 + c5;
+    Complex c7 = c5 + 5;
+    cout << c7;
 
     return 0;
 }

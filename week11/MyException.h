@@ -1,5 +1,7 @@
 #pragma once
-#include "DynamicArray.h"
+//#include "DynamicArray.h"
+
+class DynamicArray;   // Àü¹æ ¼±¾ð
 class MyException {
 public:
 	int errorCode;

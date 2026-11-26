@@ -1,25 +1,18 @@
 #include <iostream>
 #include <fstream>
 #include <cassert>
-#include <string>
 using namespace std;
 
 int main()
 {
-    string data;
-
-    ifstream inStrm("pokemons.txt", ios::in);  // text 읽기모드, 기본값이라 생략 가능
-    if (!inStrm.is_open())
+    ofstream ostr("dl.txt", ios::out | ios::app);  // ¾²±â ¹× Ãß°¡
+    if (!ostr.is_open())
     {
-        cout << "pokemons.txt을 열 수 없습니다.";
-        assert(false);  // 프로그램 중단
+        cout << "dl.txt" << endl;
+        assert(false);
     }
-    for (int i = 1; i <= 2; i++)
-    {
-        inStrm >> data;
-        cout << data << "  ";
-    }
-    inStrm.close();
-
+    ostr << "cpp2" << " ";
+    ostr << "bigdata2";
+    ostr.close();
     return 0;
 }
